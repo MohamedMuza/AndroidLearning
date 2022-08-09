@@ -53,27 +53,26 @@ public class MainActivity extends AppCompatActivity {
         imageButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
                 if (!state){
-                    CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
 
                     try {
                         String cameraId = cameraManager.getCameraIdList()[0];
                         cameraManager.setTorchMode(cameraId, true);
                         state = true;
                         imageButton.setImageResource(R.drawable.imageson);
-                    }catch (CameraAccessException e){
-
+                    }catch (CameraAccessException e) {
+                        e.printStackTrace();
                     }
                 }else {
-                    CameraManager cameraManager = (CameraManager) getSystemService(Context.CAMERA_SERVICE);
 
                     try {
                         String cameraId = cameraManager.getCameraIdList()[0];
                         cameraManager.setTorchMode(cameraId, false);
                         state = false;
                         imageButton.setImageResource(R.drawable.downloadoff);
-                    }catch (CameraAccessException e){
-
+                    }catch (CameraAccessException e) {
+                        e.printStackTrace();
                     }
                 }
             }
