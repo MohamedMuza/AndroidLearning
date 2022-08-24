@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Broadcast App</string>
+    <string name="hello_everyone">hello everyone!</string>
+    <string name="Next_Page">Next</string>
+    <string name="previous">Previous</string>
+    <string name="text">Welcome to second page</string>
+</resources>
