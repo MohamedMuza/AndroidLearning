@@ -1,4 +1,4 @@
-package com.raman.torch;
+package com.muzammil.torch;
 
 import org.junit.Test;
 
